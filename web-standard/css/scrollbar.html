@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滚动条样式</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        /* 滚动条设置 */
+        /* 滚动条主体部分 */
+        body::-webkit-scrollbar {
+            width: 5px;
+            background: #efefef;
+        }
+        /* 滚动条两端按钮 */
+        body::-webkit-scrollbar-button {
+            background: #cccccccc;
+        }
+        /* 滚动条 */
+        body::-webkit-scrollbar-thumb {
+            display: block;
+            background:#87CEFACC;
+            max-width: 10px;
+            border-radius: 100px;
+        }
+        .container {
+            width: 100%;
+            height: 200%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    
+</body>
+</html>
