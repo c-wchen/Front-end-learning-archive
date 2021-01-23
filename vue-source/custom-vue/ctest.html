@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<h2>{{person.name}} -- {{person.age}}</h2>
+			<h2 v-text="person.name"></h2>
+			<input  v-model="message"/> 
+			<label>{{message}}  -- {{person.name}} </label>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+			</ul>
+			<div v-html="htmlStr"></div>
+			<div v-text="msg"></div>
+			<button v-on:click="handleClick">按钮</button>
+		</div>
+	</body>
+	<script type="text/javascript" src="./Observer.js"></script>
+	<script type="text/javascript" src="./cvue.js"></script>
+	<script type="text/javascript">
+		var vm = new CVue({
+			data: {
+				person: {
+					name: 'chenwchen',
+					age: 21
+				},
+				htmlStr: '<h1>HelloWorld</h1>',
+				msg: 'chenwangchen',
+				message: '1234'
+			},
+			el: '#app',
+			methods: {
+				handleClick: function() {
+					alert('handleClick');
+				}
+			}
+		})
+	</script>
+</html>

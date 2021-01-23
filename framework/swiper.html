@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper组件库</title>
+    <link rel="stylesheet" href="vendor/swiper-6.4.5/package/swiper-bundle.css">
+    <style>
+        .swiper-container {
+            width: 960px;
+            height: 540px;
+        }  
+        .swiper-container img {
+            width: 100%;
+            height: 100%;
+            /* object-fit: contain; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        API 文档
+        https://www.swiper.com.cn/api/
+     -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <script src="vendor/swiper-6.4.5/package/swiper-bundle.min.js"></script>
+    <script>        
+        var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'horizontal', // 垂直切换选项
+          loop: true, // 循环模式选项
+          mousewheel: true,
+          autoplay: true,
+          delay: 10,
+          
+          // 如果需要分页器
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          
+          // 如果需要前进后退按钮
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          // 如果需要滚动条
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        })        
+    </script>
+      
+</body>
+</html>

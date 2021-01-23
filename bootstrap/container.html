@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>容器</title>
+    <link rel="stylesheet" href="vendor/bootstrap-4.6.0/dist/css/bootstrap.css">
+    <style>
+        .container {
+            background: gray;
+        }
+        .container-fluid {
+            background: pink;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- 
+        固定容器
+        |---------------------------------
+        |  value         |         width |
+        |  >=1200        |         1140  |
+        |  >=992         |         960   |
+        |  >=768         |         720   |
+        |  >=576         |         540   |
+        |  <576          |         100%  |
+        |----------------|---------------|
+        padding-left: 15px
+        padding-right: 15px
+     -->
+    <div class="container">
+        固定容器 container
+    </div>
+    <!-- 
+        width: 100%
+        padding-left: 15px
+        padding-right: 15px
+     -->
+    <div class="container-fluid">
+        流体容器 container-fluid
+    </div>
+    
+</body>
+</html>
