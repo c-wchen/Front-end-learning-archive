@@ -1,0 +1,158 @@
+<!-- 定义文档类型 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html标签学习</title>
+</head>
+<body>
+    <div>
+        <!-- 超链接标签 -->
+        <a href="www.baidu.com">跳转百度</a>
+    </div>
+    <div>
+        <abbr title="文本提示">这是一段文本</abbr>
+    </div>
+    <div>
+        <address>wchen <a href="mailto:cwangcing@gmail.com">cwangcing@gmail.com</a></address>
+    </div>
+    <div>
+        <article>文章区域</article>
+    </div>
+    <div>
+        <aside>侧边栏</aside>
+    </div>
+    <div>
+        <b>粗体</b>
+    </div>
+    <div>
+        <!-- 链接跳转默认地址 -->
+        <base href="http://www.google.com">
+        <a href="">1212</a>
+    </div>
+    <div>
+        <!-- 设置文字方向
+                rtl  从右到左
+                ltr  从左到右    
+        -->
+        <bdo dir="rtl">这是一段文字</bdo>
+    </div>
+
+    <div>
+        <blockquote title="提示文章">
+            lockquote元素中一般嵌套p元素，用于标记被引用的文本，这些引用文本并不是直接位于blockquote元素中。
+        </blockquote>
+    </div>
+
+    <div>
+        <table>
+            <caption>表格标题</caption>
+            <tr>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+            </tr>
+            <tr>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+            </tr>
+            <tr>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+                <td>t1</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <code>
+            <var>var a = 12</var>
+            function test() {
+
+                console.log("print text")
+            }
+        </code>
+    </div>
+
+    <div>
+
+        <dl>
+            <dt>这是一个文字</dt>
+            <dd>第二段描述</dd>
+            <dt>这是一个文字</dt>
+            <dd>第二段描述</dd>
+        </dl>
+    </div>
+
+    <div>
+        <del>删除文本</del>
+    </div>
+
+    <div>
+        <em>强调文本</em>
+    </div>
+
+    <div style="font-size: 20px;">
+        <hr/>
+        <h1>标题1</h1>
+        <h2>标题2</h2>
+        <h3>标题3</h3>
+        <h4>标题4</h4>
+        <h5>标题5</h5>
+        <h6>标题6</h6>
+        <hr/>
+    </div>
+
+    <div>
+        <style>
+            .text-area {
+                padding: 10px;
+                border: 2px skyblue solid;
+                outline: none;
+                border-radius: 5px;
+            }
+        </style>
+        <textarea class="text-area" name="" id="" cols="50" rows="10"></textarea>
+    </div>
+
+    <div>
+        <progress id="download" value="10" max="100"></progress>
+        <script>
+            // 进度条设置
+            var  progress = document.getElementById("download")
+            var x = 0 // 可以从服务端获取
+            setInterval(function() {
+                x = (x += 10) % 100
+                progress.value = x
+            }, 300)
+        </script>
+    </div>
+    <div>
+        <noscript>当不支持javascript时</noscript>
+    </div>
+
+    <div>
+        <p>y = x<sup>2</sup> + 2</p>
+        <p>y = a<sub>2</sub> + 2</p>
+    </div>
+    <div>
+        <div tabindex="1" id="text" style="width: 400px; height: 100px; background: orange;" contenteditable="true" draggable="true">这是文字</div>
+
+        <script>
+            var text = document.getElementById("text")
+            console.log(text)
+        </script>
+    </div>
+
+</body>
+
+</html>
