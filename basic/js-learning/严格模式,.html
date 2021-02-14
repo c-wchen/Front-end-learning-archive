@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>严格模式</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    "use strict";
+    // 严格模式进行严格比较, 不会隐式转换进行比较
+    let a = 12
+    let b = "12"
+
+    console.log(a == b, a === b)
+
+    a = []
+    b = ""
+    let c = 0
+
+    console.log(a == b, a == c, b == c, a === b, a === c, b === c)
+
+    
+    
+
+
+</script>
+</html>

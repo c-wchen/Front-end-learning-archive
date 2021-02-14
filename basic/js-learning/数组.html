@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组相关操作</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 创建数组对象的方式
+    let a = [1, 2, 3, 4]
+    // let a = new Array(1, 2, 3, 4)
+
+    // 获取长度
+    console.log(a.length)
+
+
+    //判断是否为数组
+    console.log(Array.isArray(a))
+    console.log(Array.isArray("1212"))
+
+
+    // 连接数组
+    // array1.concat(array2,array3,...,arrayX)
+    // let b =  a.concat([4, 5, 6])
+    let b =  a.concat([4, 5, 6], [7, 8])
+    console.log(b)
+
+    b.fill(100, 1)
+    console.log(b)
+    
+
+
+
+</script>
+</html>

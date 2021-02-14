@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+</head>
+<body>
+    <div class="page">
+        <input id="guess" type="text"><input onclick="checkGuess()" id="submit" type="submit" value="确定">
+        <div>
+            <span>上次猜测的数字： </span>
+            <span id="record"></span>
+        </div>
+        <div id="status"></div>
+        <div>
+            <button onclick="reset()">重新开始</button>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    var record = []
+    var randomVal = Math.floor(Math.random() * 100) + 1
+    var count = 0
+    
+    function reset() {
+        count = 0
+        record = []
+        randomVal = Math.floor(Math.random() * 100) + 1
+        document.getElementById("submit").disabled = false
+        document.getElementById("record").innerText=""
+        document.getElementById("status").innerText=""
+    }
+    
+
+    function checkGuess() {
+        var guessText = document.getElementById("guess").value
+        var guessVal = guessText == "" ? 0 : parseInt(guessText)
+        if (isNaN(guessVal)) return 
+        if (count >= 10) {
+            document.getElementById("submit").disabled = true
+            return
+        }
+        record.push(guessVal)
+        if (randomVal == guessVal) {
+            document.getElementById("status").innerText = "猜对了"
+            document.getElementById("submit").disabled = true
+        } else if (randomVal < guessVal) {
+            document.getElementById("status").innerText = "猜高了"
+        } else {
+            document.getElementById("status").innerText = "猜低了"
+        }
+        count++
+        document.getElementById("record").innerText = record.toLocaleString()
+    }
+
+
+</script>
+</html>

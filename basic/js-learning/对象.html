@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 创建对象
+    let a = {}
+    // 使用键值对
+    let b = {
+        name: "chen",
+        age: 21,
+        test: function() {
+            console.log("test")
+        }
+    }
+    console.log(b)
+
+    // 进行简写, 根据变量名和函数名进行生成键
+    let name = "chen"
+    let age = 21
+    let c = {
+        name,
+        age,
+        test() {
+            console.log("test")
+        }
+    }
+    console.log(c)
+
+    // 使用类模板进行创建对象, new Test().prototype == Test.prototype
+    class Test {
+        constructor() {
+            this.name = "chen"
+            this.age = 21
+        }
+        test() {
+            console.log("test")
+        }
+    }
+
+    console.log(Test, new Test())
+
+    
+</script>
+
+</html>
